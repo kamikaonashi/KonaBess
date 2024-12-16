@@ -303,6 +303,18 @@ public class KonaBessCore {
                 dtb.id = i;
                 dtb.type = ChipInfo.type.sun;
                 dtbs.add(dtb);
+            } else if (checkChip(context, i, "Blair")
+                    || checkChip(context, i, "Blair SoC")) {
+                dtb dtb = new dtb();
+                dtb.id = i;
+                dtb.type = ChipInfo.type.blair;
+                dtbs.add(dtb);
+            } else if (checkChip(context, i, "Holi")
+                    || checkChip(context, i, "Holi SoC")) {
+                dtb dtb = new dtb();
+                dtb.id = i;
+                dtb.type = ChipInfo.type.holi;
+                dtbs.add(dtb);    
             }
         }
     }

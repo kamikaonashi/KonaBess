@@ -45,6 +45,10 @@ public class KonaBessStr {
             return convert_bins_kalama_sg(which, activity);
         else if (ChipInfo.which == ChipInfo.type.sun)
             return convert_bins_sun(which, activity);
+        else if (ChipInfo.which == ChipInfo.type.blair)
+            return convert_bins_blair(which, activity);
+        else if (ChipInfo.which == ChipInfo.type.holi)
+            return convert_bins_holi(which, activity);    
 
         throw new Exception();
     }
@@ -215,6 +219,22 @@ public class KonaBessStr {
     }
 
     public static String convert_bins_sun(int which, Activity activity) {
+        return activity.getResources().getString(R.string.unknown_table) + which;
+    }
+    
+    public static String convert_bins_blair(int which, Activity activity) {
+        switch (which) {
+            case 0:
+                return activity.getResources().getString(R.string.blair);
+        }
+        return activity.getResources().getString(R.string.unknown_table) + which;
+    }
+    
+    public static String convert_bins_holi(int which, Activity activity) {
+        switch (which) {
+            case 0:
+                return activity.getResources().getString(R.string.holi);
+        }
         return activity.getResources().getString(R.string.unknown_table) + which;
     }
 
